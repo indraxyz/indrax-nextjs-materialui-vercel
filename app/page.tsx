@@ -192,6 +192,24 @@ export default function ResumePage() {
                 </div>
               </CardContent>
             </Card>
+
+            {/* Tech Stacks */}
+            <Card>
+              <CardHeader>
+                <SectionHeader icon={<Code className="h-5 w-5" />} title="Tech Stack" />
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  {techStacks.map((stack, index) => (
+                    <div key={index}>
+                      <p className="font-semibold text-xs mb-1">{stack.category}</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{stack.items}</p>
+                      {index < techStacks.length - 1 && <Separator className="mt-3" />}
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           {/* Sidebar */}
@@ -290,24 +308,6 @@ export default function ResumePage() {
                     </li>
                   ))}
                 </ul>
-              </CardContent>
-            </Card>
-
-            {/* Tech Stacks */}
-            <Card>
-              <CardHeader>
-                <SectionHeader icon={<Code className="h-5 w-5" />} title="Tech Stack" />
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  {techStacks.map((stack, index) => (
-                    <div key={index}>
-                      <p className="font-semibold text-xs mb-1">{stack.category}</p>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{stack.items}</p>
-                      {index < techStacks.length - 1 && <Separator className="mt-3" />}
-                    </div>
-                  ))}
-                </div>
               </CardContent>
             </Card>
 
