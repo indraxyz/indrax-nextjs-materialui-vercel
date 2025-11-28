@@ -54,6 +54,9 @@ export interface Education {
   institution: string
   period: string
   gpa?: string
+  thesis?: string
+  description?: string
+  organization?: string[]
 }
 
 export interface Certification {

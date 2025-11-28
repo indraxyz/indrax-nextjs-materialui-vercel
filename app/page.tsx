@@ -46,7 +46,7 @@ export default function ResumePage() {
         <div className="container mx-auto max-w-6xl px-4 py-4">
           <div className="flex items-center justify-between">
             <h1 className="text-xl font-bold">{RESUME_CONFIG.title}</h1>
-            <Button
+            {/* <Button
               variant="outline"
               size="sm"
               onClick={() => window.print()}
@@ -54,7 +54,7 @@ export default function ResumePage() {
             >
               <Download className="h-4 w-4 mr-2" />
               Download PDF
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>
@@ -233,16 +233,43 @@ export default function ResumePage() {
               <CardHeader>
                 <SectionHeader icon={<GraduationCap className="h-5 w-5" />} title="Education" />
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-6">
                 {education.map((edu, index) => (
-                  <div key={index}>
-                    <p className="font-semibold text-sm mb-1">{edu.degree}</p>
-                    <p className="text-sm text-muted-foreground">{edu.institution}</p>
-                    <p className="text-sm text-muted-foreground mb-1">{edu.field}</p>
-                    <p className="text-xs text-primary font-medium mt-1">
-                      {edu.period}
-                      {edu.gpa && ` • GPA: ${edu.gpa}`}
-                    </p>
+                  <div key={index} className="space-y-3">
+                    <div>
+                      <p className="font-semibold text-sm mb-1">{edu.degree}</p>
+                      <p className="text-sm text-muted-foreground">{edu.institution}</p>
+                      <p className="text-sm text-muted-foreground mb-1">{edu.field}</p>
+                      <p className="text-xs text-primary font-medium mt-1">
+                        {edu.period}
+                        {edu.gpa && ` • GPA: ${edu.gpa}`}
+                      </p>
+                    </div>
+                    {edu.thesis && (
+                      <div>
+                        <p className="text-xs font-semibold text-foreground mb-1">Thesis:</p>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          {edu.thesis}
+                        </p>
+                      </div>
+                    )}
+                    {edu.organization && edu.organization.length > 0 && (
+                      <div>
+                        <p className="text-xs font-semibold text-foreground mb-1">Organizations:</p>
+                        <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground ml-2">
+                          {edu.organization.map((org, i) => (
+                            <li key={i}>{org}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    {edu.description && (
+                      <div>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          {edu.description}
+                        </p>
+                      </div>
+                    )}
                     {index < education.length - 1 && <Separator className="mt-4" />}
                   </div>
                 ))}

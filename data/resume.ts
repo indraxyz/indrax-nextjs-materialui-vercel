@@ -55,7 +55,7 @@ export const experiences: ExperienceItem[] = [
     company: "Primuse, Bali",
     role: "Senior Software Engineer",
     description: [
-      "Core team of Kisum App",
+      "Core team member for Kisum App, leading development from inception to production with a focus on clean code architecture and scalable systems. Key modules developed include Artists, AI Chat, News, Events & Financials, Festivals, Venues, Vendors, and Market.",
       "Technologies: TypeScript, NextJS, Tailwind, Shadcn, GraphQL, WebSocket, REST API, Vercel, AWS, Cloudflare, Redux/ Zustand/ Context, Tanstack, Mapbox, Swiper, Onborda, Echarts, Recharts, JWT, Stripe, Figma, Jest, docker, github, Turbopack, MongoDB, Aws/ Cloudflare",
     ],
   },
@@ -175,26 +175,76 @@ export const techSkills = [
 ]
 
 export const techStacks: TechStack[] = [
-  { category: "Cloud & Hosting", items: "Vercel, AWS, Cloudflare" },
-  { category: "Backend Frameworks", items: "Hono.js, Laravel" },
-  { category: "Development Type", items: "Fullstack, Serverless" },
+  { category: "Deployment", items: "Vercel, AWS, Cloudflare" },
+  {
+    category: "Software Design & Architecture",
+    items: "Microservice, Monolith, Service Oriented, Event-driven, Serverless, Microkernel",
+  },
   { category: "Languages", items: "TypeScript, Go" },
-  { category: "Frontend Frameworks", items: "Next.js, Remix, Preact, React Native" },
-  { category: "APIs & Real-time", items: "GraphQL, WebSocket, Crypto" },
-  { category: "ORM & Database Tools", items: "Prisma, Drizzle, Redis" },
-  { category: "Databases", items: "MySQL, PostgreSQL, MongoDB" },
-  { category: "UI Libraries & Styling", items: "Tailwind, Shadcn, Tamagui" },
-  { category: "Build Tools", items: "Turbopack, Vite" },
-  { category: "Libraries", items: "Tanstack, Rxjs, Mapbox, Swiper, Onborda, docker" },
+  { category: "Backend Frameworks", items: "Hono.js, GoFiber, Laravel, Express" },
+  { category: "API Documentation", items: "Swagger" },
+  { category: "Containerization", items: "Docker" },
+  { category: "Realtime Communication", items: "RPC JSON-RPC, WebSocket" },
+  {
+    category: "ORM & Database, other tools",
+    items: "Prisma, Drizzle, Serverless Storage, Redis, Crypto",
+  },
+  { category: "API Architecture", items: "RESTful, GraphQL" },
+  { category: "Backend Testing", items: "Jest, Vitest, Testify" },
+  { category: "Databases", items: "PostgreSQL, MySQL, MongoDB, Supabase, Firebase, Neon" },
+  {
+    category: "Serverless Functions",
+    items: "AWS Lambda, Cloudflare Workers, Vercel Function",
+  },
+  { category: "Frontend Frameworks", items: "Next.js, Remix React-Router, Preact" },
+  { category: "Build Tools", items: "Webpack, Turbopack, Vite" },
+  {
+    category: "UI Component Libraries",
+    items: "Shadcn, Radix, HeroUI, FluentUI, MantineUI, Chakra, Gluestack, Tamagui, Lit",
+  },
+  {
+    category: "Styling",
+    items: "Emotion, Tailwind, UnoCSS, Kuma UI, Styled JSX",
+  },
+  { category: "Network & Data Fetching", items: "React-Query, Axios, Fetch" },
+  { category: "Text Editors", items: "Tiptap, Plate, Quill" },
+  { category: "Onboarding", items: "Onborda" },
+  { category: "Sliders & Carousels", items: "Swiper, Embla-carousel" },
+  {
+    category: "Frontend Utilities",
+    items:
+      "Lodash, RxJS, Tanstack Table, Hooks, Async, Loadable-components, Algolia, Alpine, Mapbox",
+  },
   { category: "State Management", items: "Redux, Zustand, Context" },
-  { category: "Animation", items: "GSAP, Framer Motion" },
-  { category: "Data Visualization", items: "Echarts, Recharts" },
-  { category: "Authentication", items: "JWT, Better-auth" },
-  { category: "Development Tools", items: "Vibe coding, Cursor, LLM" },
-  { category: "Collaboration & Versioning", items: "Notion, Github" },
-  { category: "Payment Integration", items: "Stripe, Midtrans" },
-  { category: "Design Tools", items: "Figma, Eraser, Miro" },
-  { category: "Testing", items: "Jest, Vitest" },
+  { category: "Form Validation", items: "React-hook-form, Zod" },
+  {
+    category: "Frontend Testing",
+    items: "Jest, Vitest, Unit, Integration, JSON-server (data mocking)",
+  },
+  { category: "Design Tools", items: "Figma, Eraser, Miro, PS, AI" },
+  { category: "Documentation", items: "Storybook" },
+  { category: "Animation", items: "GSAP, Framer Motion, Remotion" },
+  { category: "Data Visualization & Charts", items: "Echarts, Recharts, Nivo" },
+  { category: "Diagramming", items: "React Flow" },
+  {
+    category: "Mobile React Native",
+    items:
+      "Tamagui, Expo, Flash List, Firebase, React Navigation, Mapbox, Notifications, Hardware Module",
+  },
+  { category: "Authentication", items: "JWT, Auth.js, Better-auth" },
+  { category: "AI & Machine Learning", items: "Prompting, Model, Agents, Context" },
+  { category: "Payment Gateways", items: "Midtrans, Stripe, Polar" },
+  { category: "Version Control", items: "Git, GitHub, GitHub Project" },
+  { category: "Code Agents", items: "Cursor, Copilot" },
+  { category: "Project Management", items: "Planner Microsoft, GitHub Project, Notion" },
+  { category: "IDE", items: "VSCode, Cursor" },
+  { category: "LLM", items: "GPT, Claude, Gemini, Llama" },
+  { category: "Vibe Coding", items: "Rules, MCP, Code Agent, Models, PRD, Context" },
+  {
+    category: "Remote Collaboration",
+    items:
+      "Notion, GitHub Project (Task), Teams, Google Meet, Zoom (Conference), GitHub, Microsoft Cloud, Google Workspace (Sharing)",
+  },
   { category: "Operating Systems", items: "Windows, Linux, MacOS" },
 ]
 
@@ -205,12 +255,24 @@ export const education: Education[] = [
     institution: "(UNTAG) Universitas 17 Agustus 1945 Surabaya",
     period: "Aug 2013 - Feb 2018",
     gpa: "3.66",
+    thesis:
+      "Developed an application (web & Android) called Crimenesia for facilitating crime reporting and communication between police and the community.",
+    organization: [
+      "Pencak Silat Merpati Putih",
+      "HIMA Informatika UNTAG",
+      "CTComp (Tech Community)",
+    ],
+    description:
+      "Graduated with honors with a GPA of 3.66. Led multiple tech community activities, participated in student organizations, and completed a thesis project developing a crime reporting application (Crimenesia) in collaboration with local police and the community.",
   },
   {
     degree: "Senior High School",
     field: "Natural Sciences Major",
     institution: "SMAN 1 Gedangan, Sidoarjo",
     period: "2009 - 2012",
+    organization: ["DANS Sidoarjo (Duta Anti Narkoba Sidoarjo)"],
+    description:
+      "Graduated with a strong foundation in natural sciences, participated in student activities, and played an active role in anti-drug prevention initiatives with the Duta Anti Narkoba Sidoarjo (DANS) organization as Vice Chairman.",
   },
 ]
 
@@ -222,12 +284,12 @@ export const certifications: Certification[] = [
     link: "https://www.hackerrank.com/certificates/a42dc6068da4",
   },
   {
-    title: "Analysts and Developers",
+    title: "Information system audit",
     issuer: "BNSP Certification",
     period: "Mar 2018 - Mar 2021",
   },
   {
-    title: "Website application security audit",
+    title: "Website application security training",
     issuer: "ISTTS Institut Sains Terapan & Teknologi Surabaya",
     period: "Apr 2019",
   },

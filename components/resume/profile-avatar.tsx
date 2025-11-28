@@ -63,7 +63,7 @@ export function ProfileAvatar({
           <AvatarImage
             src={src}
             alt={alt}
-            className="object-cover transition-transform duration-300 group-hover:scale-110 grayscale group-hover:grayscale-0"
+            className="object-cover transition-transform duration-300 group-hover:scale-110 grayscale-25"
           />
           <AvatarFallback className="text-lg sm:text-xl md:text-2xl font-bold bg-linear-to-br from-primary/10 to-primary/5 text-primary">
             {fallback}
