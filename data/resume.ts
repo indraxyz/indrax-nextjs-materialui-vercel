@@ -21,6 +21,7 @@ export const personalInfo: PersonalInfo = {
   status: "Married",
   address: "Kebo Iwa, Bali, Indonesia",
   github: "https://github.com/indraxyz",
+  website: "https://indrax.my.id",
   highlightSkills: [
     "Vercel/ AWS/ Cloudflare",
     "Honojs/ Laravel",

@@ -20,6 +20,7 @@ import {
   Github,
   Download,
   UserSearch,
+  Globe,
 } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -108,6 +109,17 @@ export default function ResumePage() {
                     >
                       <Github className="h-4 w-4" />
                       <span>github.com/indraxyz</span>
+                    </Link>
+                  )}
+                  {personalInfo.website && (
+                    <Link
+                      href={personalInfo.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <Globe className="h-4 w-4" />
+                      <span>{personalInfo.website}</span>
                     </Link>
                   )}
                 </div>

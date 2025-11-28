@@ -46,6 +46,7 @@ export interface PersonalInfo {
   linkedin?: string
   skillSets?: SkillSets[]
   highlightSkills?: string[]
+  website?: string
 }
 
 export interface Education {
